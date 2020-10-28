@@ -1,0 +1,11 @@
+name: deploy2server
+on: 
+  repository_dispatch:
+    - deploy2server
+jobs:
+  test:
+    name: Run your tests
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "I just ran all your tests!${{ github.event.action }}" 
